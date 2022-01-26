@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="./src/style.css">
+  <title>SIGN-UP</title>
+</head>
+<body>
+  <div class="pic">
+    <div class="title">YOYU</div>
+    <div class="pic-author">
+      Photo by <a href="https://unsplash.com/@remithorel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rémi Thorel</a> on <a href="https://unsplash.com/s/photos/101?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </div>
+  </div>
+  <main>
+    <div class="intro">
+      <p>This is not a real online service! You know you need something
+         like this in your life to help you realize your deepest dreams.<br/>
+         Sign up <em>now</em> to get started.<br/><br/>
+         You <em>know</em> you want to.
+      </p>
+    </div>
+    <form action="">
+      <h3>Let's do this!</h3>
+      <div class="form-body">
+        <label for="firstname">FIRST NAME*
+          <input type="text" name="firstname" id="firstname" required>
+        </label>
+        <label for="lastname">LAST NAME*
+          <input type="text" name="lastname" id="lastname" required>
+        </label>
+        <label for="email">EMAIL*
+          <input type="email" name="email" id="email" required>
+        </label>
+        <label for="phone-number">PHONE NUMBER
+          <input type="tel" name="phone-number" id="phone-number">
+        </label>
+        <label for="password">PASSWORD*
+          <input type="password" name="password" id="password" required>
+        </label>
+        <label for="confirm-password">CONFIRM PASSWORD*
+          <input type="password" name="confirm-password" id="confirm-password" required>
+        </label>        
+      </div>
+      <button type="submit">Create Account</button>
+      <p>Already have an account? <button type="button" class="inline-button">Log in</button></p>
+    </form>
+  </main>
+</body>
+</html>

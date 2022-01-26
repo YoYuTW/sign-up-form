@@ -1,0 +1,165 @@
+@font-face {
+  font-family: Norse-Bold;
+  src: url('./Norse-Bold.otf');
+}
+
+@font-face {
+  font-family: Dongle;
+  src: url('./Dongle-Regular.ttf');
+}
+
+:root {
+  --background-color: black;
+  --text-color: white;
+  --title-height: 25vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; 
+  text-align: center;
+  font-size: 18px;
+}
+
+a:visited,
+a:link {
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-color, black);
+  color: var(--text-color, white);
+  display: flex;
+  flex-flow: column;
+}
+
+.pic {
+  height: 100vh;  
+  background-size: cover;
+  background-position: center center;
+  background-image: url('./bg-pic.jpg');
+  display: flex;
+  flex-flow: column;
+  gap: calc(80vh - var(--title-height));
+}
+
+.title {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--title-height);
+  padding-top: 1rem;
+  font-size: 4rem;
+  background-color: rgba(0,0,0,0.6);
+  font-family: Norse-Bold;
+}
+
+main {
+  height: 100vh;  
+}
+
+.intro {
+  background-color: rgb(1,21,31);  
+  padding: 5% 5%;
+  display: flex;
+  align-items: flex-end;
+  text-align: start;
+  line-height: 2rem;
+}
+
+form {
+  padding: 5%;
+  text-align: left;
+}
+
+.form-body {
+  display: grid;  
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(3,33%);
+  gap: 0.5rem;
+  padding-bottom: 30px;
+}
+
+label {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  font-family: Dongle;
+  font-size: 26px;
+  text-overflow: none;
+}
+
+input {
+  background-color: var(--background-color);
+  border: grey 1px solid;
+  color: var(--text-color);
+  width: 80%;
+}
+
+input:user-invalid {
+  border-color: red;
+}
+
+label[for='password']::after {
+  content: "*Passwords do not match";
+  color: red;
+  font-size: 1rem;
+}
+
+.inline-button {
+  border: none;
+  background-color: var(--backgroung-color);
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+form>button {
+  background-color: rgb(22, 87, 115);
+  border: black 1px solid;
+  color: var(--text-color);
+  width: 100%;
+  padding: 5% 0;
+  border-radius: 10px;
+}
+
+form>p {
+  font-size: 0.8rem;
+}
+
+
+@media only screen and (min-width: 800px) {
+  body {
+    flex-flow: row;
+    font-size: 24px;
+  }
+  .pic {
+    width: 40%;
+    background-size: auto 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .title {
+    font-size: 6rem;
+  }
+  main {
+    width: 60%;
+  }  
+  .intro {      
+    height: calc(var(--title-height) + 1rem + 6rem);
+    padding: 0 5%;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  form {
+    font-size: 2rem;
+  }
+  label {
+    font-size: 2rem;
+  }
+  form>button {
+    background-color: rgb(22, 87, 115);
+    border: black 1px solid;
+    color: var(--text-color);
+    width: auto;
+    padding: 1% 10%;
+    border-radius: 10px;
+  }
+}
